@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        body{
+            background-color: rgb(37, 37, 37);
+            color: white;
+        }
+        h1{
+            text-align: center;
+            animation-name: op;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            color: rgb(0, 255, 0);
+        }
+        h2{
+            color: rgb(255, 115, 0);
+        }
+        @keyframes op{
+            from{
+                opacity: 0;
+                transform: scale(0);
+            }
+            to{
+                opacity: 1;
+                transform:scale(1.0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2>
+    <ol type="1">
+        <li>Acordar</li>
+        <li>Tomar Banho</li>
+        <li>Escovar os Dentes</li>
+        <li>Tomar Café</li>
+        <li>Ir para o Onibus</li>
+        <li>Ir para escola</li>
+        <li>Estudar</li>
+        <li>Voltar Para o onibus</li>
+        <li>Voltar Para Casa</li>
+    </ol>
+    <h2>Listas não ordenadas</h2>
+    <ul>
+        <li>Pão</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Leite</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Tomate</li>
+    </ul>
+    <h2>Minhas Linguagens Favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+            <ol type="" start="0">
+                <li>Não tenho</li>
+            </ol>
+        <li>Novas</li>
+        <ol>
+            <li>Python</li>
+            <li>Java Script</li>
+            <li>PHP</li>
+            <li>Html5</li>
+            <li>Css5</li>
+        </ol>
+    </ol>
+</html>
