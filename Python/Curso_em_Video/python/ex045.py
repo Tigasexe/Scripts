@@ -8,6 +8,11 @@ print('[ 1 ] PEDRA')
 print('[ 2 ] PAPEL')
 print('[ 3 ] TESOURA')
 jogador = int(input('Qual e a Sua Jogada? '))
+
+if jogador > 3 or jogador < 1:
+    print('{} Não é Valido.'.format(jogador))
+    exit()
+
 print('JO')
 sleep(1)
 print('KEN')
