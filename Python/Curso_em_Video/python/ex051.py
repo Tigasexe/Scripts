@@ -4,8 +4,9 @@ print('='*15)
 
 pt = int(input('Primeiro Termo: '))
 r = int(input('Razão: '))
+decimo = pt + (10 -1) * r
 
-for c in range(pt, 10, r):
+for c in range(pt, decimo, r):
     print(c, end=' ➛ ')
 
 print('ACABOU!')
