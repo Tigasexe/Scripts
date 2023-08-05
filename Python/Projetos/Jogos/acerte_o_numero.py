@@ -47,7 +47,7 @@ if op == 1:
         numero_secreto = randint(0, 100)
         tentativas = 0
         while True:
-            user = int(input(f'\nEscreva um numero no intervalo de (0, 100):{numero_secreto} '))
+            user = int(input(f'\nEscreva um numero no intervalo de (0, 100): '))
             tentativas += 1
 
             if user < 0 or user > 100:
