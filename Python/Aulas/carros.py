@@ -8,7 +8,7 @@ class Carros():
         self.ligado = False
         self.velocidade_atual = 0
 
-    def ligar(self):
+    def ligar(sewlf):
 
         if not self.ligado and self.velocidade_atual == 0:
             self.ligado = True
