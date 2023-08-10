@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            font: normal 12pt Arial;
+        }
+        img{
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        div#aviso{
+            opacity: 0;
+        }
+        div#res {
+            margin-top: 5px;
+            opacity: 0;
+        }
+    </style>
+<body>
+    <h1>Sistema de Multas</h1>
+    <img id="aviso" src="https://images.tcdn.com.br/img/img_prod/861159/placa_de_transito_regulamentacao_r_19f_velocidade_maxima_60_km_h_2791542_1_9d16c9ad5f4d074e759fbd4b26445590.jpg" alt="Placa de Sinalização">
+    <br>
+    Velocidade do carro <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="res">Resultado</div>
+    <div id="aviso">Aviso!</div>
+    <script>
+        function Calcular(){
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            var aviso = window.document.querySelector('div#aviso')
+            aviso.style.opacity = '100%'
+            aviso.innerHTML = 'Use o cinto de Segurança!'
+            if (vel >= 1000){
+                res.style.opacity = '100%'
+                res.style.color = 'darkgreen'
+                res.innerHTML = 'TA PORRA RELÂMPAGO MARQUINHOS'
+                aviso.style.color = 'purple'
+                aviso.innerHTML = 'VOA MLK KKKKK'
+            }
+            else if (vel > 60){
+                res.style.opacity = '100%'
+                res.style.color = 'red'
+                aviso.style.color = 'black'
+                res.innerHTML = `Você foi <strong>MULTADO</strong> por andar à ${vel}Km/h`
+            }else{
+                res.style.opacity = '100%'
+                res.style.color = 'blue'
+                aviso.style.color = 'black'
+                res.innerHTML = 'Tenha uma boa viagem. Você passou no Limite da via!' 
+            }
+        }
+    </script>
+</body>
+</html>
