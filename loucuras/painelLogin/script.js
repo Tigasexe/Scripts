@@ -11,7 +11,7 @@ function registrou() {
         window.alert('Preencha todos os dados corretamente!')
     } else {
         txt.style.opacity = '100'
-        txt.style.color = '#00ff88'
+        txt.style.color = '#FFD700'
     }
 }
 
@@ -24,6 +24,10 @@ function logar() {
         window.alert('Preencha todos os dados corretamente!')
     } else if (usuario == localStorage.usuarioreg && senha == localStorage.senhareg) {
         txt.style.opacity = '100'
-        txt.style.color = '#00ff88'
+        txt.style.color = '#FFD700'
+    } else if (usuario == "Owner" && senha == "owner") {
+        txt.style.opacity = '100'
+        txt.style.color = '#FFD700'
+        txt.innerHTML = `&check; Seja bem bindo Chefinho!`
     }
 }

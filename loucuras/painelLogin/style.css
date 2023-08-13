@@ -28,7 +28,7 @@ body * {
 }
 
 .left-login > h1 {
-    color: #77ffc0;
+    color: #ffd900e0;
     font-size: 2vw;
 }
 
@@ -57,7 +57,8 @@ body * {
 }
 
 .card-login > h1 {
-    color: #00ff88;
+    color: #FFD700;
+    text-shadow: 0px 0px 30px #FFD700;
     font-weight: 800;
     margin: 0;
 }
@@ -104,8 +105,8 @@ body * {
     font-weight: 800;
     letter-spacing: 3px;
     color: #2b134b;
-    background: #00ff88;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
+    background: #FFD700;
+    box-shadow: 0px 10px 40px -12px #FFD700;
 }
 
 .btn-login:hover {
@@ -119,7 +120,7 @@ body * {
 }
 
 .registrar > a {
-    color: #00ff88;
+    color: #FFD700;
     border-bottom: none;
 }
 
