@@ -9,7 +9,7 @@ body * {
     box-sizing: border-box;
 }
 
-.main-login {
+.main-reg {
     width: 100vw;
     height: 100vh;
     background-color: #201b2c;
@@ -18,7 +18,7 @@ body * {
     align-items: center;
 }
 
-.left-login {
+.left-reg {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -27,16 +27,16 @@ body * {
     flex-direction: column;
 }
 
-.left-login > h1 {
+.left-reg > h1 {
     color: #77ffc0;
     font-size: 2vw;
 }
 
-.left-login-image {
-    width: 35vw;
+.left-reg-image {
+    width: 30vw;
 }
 
-.right-login {
+.right-reg {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -44,7 +44,7 @@ body * {
     align-items: center;
 }
 
-.card-login {
+.card-reg {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@ body * {
     box-shadow: 0px 10px 40px #00000056;
 }
 
-.card-login > h1 {
+.card-reg > h1 {
     color: #00ff88;
     font-weight: 800;
     margin: 0;
@@ -93,7 +93,7 @@ body * {
     color: #f0ffff94;
 }
 
-.btn-login {
+.btn-reg {
     width: 100%;
     padding: 16px 0px;
     margin: 25px;
@@ -108,55 +108,55 @@ body * {
     box-shadow: 0px 10px 40px -12px #00ff8052;
 }
 
-.btn-login:hover {
+.btn-reg:hover {
     cursor: pointer;
     font-size: 11pt;
     letter-spacing: 5px;
 }
 
-.registrar {
+.back-login {
     color: white;
 }
 
-.registrar > a {
+.back-login > a {
     color: #00ff88;
     border-bottom: none;
 }
 
-.registrar > a:hover {
+.back-login > a:hover {
     font-size: 13pt;
 }
 
 @media only screen and (max-width: 950px) {
-    .card-login{
+    .card-reg{
         width: 85%;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .main-login{
+    .main-reg{
         flex-direction: column;
     }
 
-    .left-login > h1 {
+    .left-reg > h1 {
         display: none;
     }
 
-    .left-login {
+    .left-reg {
         width: 100%;
         height: auto;
     }
 
-    .right-login {
+    .right-reg {
         width: 100%;
         height: auto;
     }
 
-    .left-login-image {
+    .left-reg-image {
         width: 50vw;
     }
 
-    .card-login {
+    .card-reg {
         width: 90%;
     }
 }

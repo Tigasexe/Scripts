@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Resgistro</title>
+    <link rel="stylesheet" href="resgistrar.css">
+</head>
+<body>
+    <div class="main-reg">
+        <div class="left-reg">
+            <h1>Registre-se<br>E entre para o nosso time!</h1>
+            <img src="../animação/registrar.svg" class="left-reg-image" alt="Animação">
+        </div>
+        <div class="right-reg">
+            <div class="card-reg">
+                <h1>REGISTRAR</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario-reg" id="usuario-reg" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha-reg" id="senha-reg" placeholder="Senha">
+                </div>
+                <button class="btn-reg" onclick="registrou()">Registrar</button>
+                <div>
+                    <label for="back-login" class="back-login">
+                        Clique para fazer o <a href="../index.html">Login</a>
+                    </label>
+                </div>
+                <div class="resultado">
+                    <label for="resultado">&check; Registro feito com sucesso!</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
