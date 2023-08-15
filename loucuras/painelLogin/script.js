@@ -38,6 +38,32 @@ function logar() {
         txt.style.opacity = '100'
         txt.style.color = 'green'
         txt.style.fontSize = '14pt'
-        txt.innerHTML = 'DEU CERTO!'
+        location.href = 'python/script.py'
+    }
+}
+
+function olhoureg() {
+    let senha = document.getElementById('senha-reg')
+    let olho = document.getElementById('olho')
+
+    if (senha.type == 'password') {
+        senha.setAttribute('type', 'text')
+        olho.setAttribute('class', 'bi bi-eye-slash-fill')
+    } else {
+        senha.setAttribute('type', 'password')
+        olho.setAttribute('class', 'bi bi-eye-fill')
+    }
+}
+
+function olhou() {
+    let senha = document.getElementById('senha')
+    let olho = document.getElementById('olho')
+
+    if (senha.type == 'password') {
+        senha.setAttribute('type', 'text')
+        olho.setAttribute('class', 'bi bi-eye-slash-fill')
+    } else {
+        senha.setAttribute('type', 'password')
+        olho.setAttribute('class', 'bi bi-eye-fill')
     }
 }

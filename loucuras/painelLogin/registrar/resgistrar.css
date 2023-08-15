@@ -94,6 +94,15 @@ body * {
     color: #f0ffff94;
 }
 
+.textfield > i {
+    cursor: pointer;
+    left: 86%;
+    top: 50.5%;
+    position: absolute; 
+    font-size: 23px;
+    color: white;
+}
+
 .btn-reg {
     width: 100%;
     padding: 16px 0px;
@@ -159,5 +168,26 @@ body * {
 
     .card-reg {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .textfield > i {
+        top: 63%;
+        left: 79%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .textfield > i {
+        top: 64%;
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .textfield > i {
+        top: 53%;
+        left: 77%;
     }
 }
