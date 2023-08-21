@@ -1,4 +1,5 @@
 let txt = document.getElementsByClassName('resultado')[0]
+let eye = document.getElementById('olho')
 txt.style.opacity = '0'
 
 
@@ -14,11 +15,6 @@ function registrou() {
         txt.style.color = 'red'
         txt.style.fontSize = '14pt'
         txt.innerHTML = 'Preencha todos os dados corretamente!'
-    } else if (usuarioreg.length <= 5){
-        txt.style.opacity = '100'
-        txt.style.color = 'red'
-        txt.style.fontSize = '14pt'
-        txt.innerHTML = `O usuario ${usuarioreg} não possui 5 ou mais caracteres!`
     } else {
         window.location.href = '../index.html'
     }
@@ -38,7 +34,8 @@ function logar() {
         txt.style.opacity = '100'
         txt.style.color = 'green'
         txt.style.fontSize = '14pt'
-        location.href = 'python/script.py'
+        location.href = 'python/main.py'
+        txt.innerHTML = 'Logado com Sucesso!'
     }
 }
 
