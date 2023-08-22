@@ -14,7 +14,8 @@ function registrou() {
         txt.style.opacity = '100'
         txt.style.color = 'red'
         txt.style.fontSize = '14pt'
-        txt.innerHTML = 'Preencha todos os dados corretamente!'
+        eye.style.top = '50.2%'
+        txt.innerHTML = 'Preencha todos os campos corretamente!'
     } else {
         window.location.href = '../index.html'
     }
@@ -29,11 +30,19 @@ function logar() {
         txt.style.opacity = '100'
         txt.style.color = 'red'
         txt.style.fontSize = '14pt'
+        eye.style.top = '50.2%'
         txt.innerHTML = 'Usuario ou senha incorretos!'
+    } else if (usuario.length == 0 || senha.length == 0){
+        txt.style.opacity = '100'
+        txt.style.color = 'red'
+        txt.style.fontSize = '14pt'
+        eye.style.top = '50.2%'
+        txt.innerHTML = 'Preencha todos os campos corretamente!'
     } else {
         txt.style.opacity = '100'
         txt.style.color = 'green'
         txt.style.fontSize = '14pt'
+        eye.style.top = '50.2%'
         location.href = 'python/main.py'
         txt.innerHTML = 'Logado com Sucesso!'
     }
