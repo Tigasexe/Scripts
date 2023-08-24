@@ -17,6 +17,12 @@ function registrou() {
         eye.style.top = '50.2%'
         txt.innerHTML = 'Preencha todos os campos corretamente!'
     } else {
+        txt.style.opacity = '100'
+        txt.style.color = 'green'
+        txt.style.fontSize = '14pt'
+        eye.style.top = '50.2%'
+        txt.innerHTML = 'Você foi registrado com sucesso!'
+        window.alert('Você está sendo redirecionado para a tela de login!')
         window.location.href = '../index.html'
     }
 }
