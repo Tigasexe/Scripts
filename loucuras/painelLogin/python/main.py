@@ -1,4 +1,5 @@
 #Bibliotecas importadas ----------------------------------
+
 from hashlib import sha256 #Criptografia
 from time import sleep #Tempo
 import string #Criar strings
@@ -6,7 +7,7 @@ import time #Tempo
 import random #Randomizar Senha
 import hashlib #Criptografia
 
-#Boas Vindas -----------------------------------
+'''#Boas Vindas -----------------------------------
 
 print('\033[33m-=\033[m'*15)
 print('   Seja Muito Bem Vindo(a) ')
@@ -109,6 +110,7 @@ else:
         print(letra, end='', flush=True)
         time.sleep(0.03)
 print('')
+'''
 #Menu do Sistema -----------------------------------
 
 while True:
@@ -130,9 +132,9 @@ while True:
 
         print('A mineração começará em...')
         
-        for cont in range(10, -1, -1):
+        '''for cont in range(5, 0, -1):
             print(cont)
-            sleep(1)
+            sleep(1)'''
         code1 = '10 reais'
         code2 = '20 reais'
         code3 = '30 reais'
@@ -145,15 +147,15 @@ while True:
         code10 = '100 reais'
 
         cripto1 = sha256(code1.encode()).hexdigest()
-        cripto2 = sha256(code2 .encode()).hexdigest()
-        cripto3 = sha256(code3 .encode()).hexdigest()
-        cripto4 = sha256(code4 .encode()).hexdigest()
-        cripto5 = sha256(code5 .encode()).hexdigest()
-        cripto6 = sha256(code6 .encode()).hexdigest()
-        cripto7 = sha256(code7 .encode()).hexdigest()
-        cripto8 = sha256(code8 .encode()).hexdigest()
-        cripto9 = sha256(code9 .encode()).hexdigest()
-        cripto10 = sha256(code10 .encode()).hexdigest()
+        cripto2 = sha256(code2.encode()).hexdigest()
+        cripto3 = sha256(code3.encode()).hexdigest()
+        cripto4 = sha256(code4.encode()).hexdigest()
+        cripto5 = sha256(code5.encode()).hexdigest()
+        cripto6 = sha256(code6.encode()).hexdigest()
+        cripto7 = sha256(code7.encode()).hexdigest()
+        cripto8 = sha256(code8.encode()).hexdigest()
+        cripto9 = sha256(code9.encode()).hexdigest()
+        cripto10 = sha256(code10.encode()).hexdigest()
 
         def gerador_de_senhas(tamanho):
             caracteres = string.ascii_letters + string.digits
@@ -165,14 +167,17 @@ while True:
         tamanho_chave = 64
         tentativas = 0
 
+        find = []
+
         while True:
             tentativas += 1
             chave_random = gerador_de_senhas(tamanho_chave)
-            chave_hashed = sha256_hash(chave_random)
+            chave_hashed = cripto1
 
             if chave_hashed == cripto1:
                 print('\033[32m' + cripto1 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto2:
                 print('\033[32m' + cripto2 + '\033[m')
@@ -213,3 +218,7 @@ while True:
             else:
                 print('\033[31m' + chave_hashed + '\033[m')
                 sleep(0.1)
+
+        with open('Cripto.txt', 'w') as save:
+            save.write(''.join(map(str, find)))
+        
