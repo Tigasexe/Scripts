@@ -195,7 +195,7 @@ while True:
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto5:
-                print('\033[32m' + crpto5 + '\033[m')
+                print('\033[32m' + cripto5 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
