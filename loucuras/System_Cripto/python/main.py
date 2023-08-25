@@ -7,7 +7,7 @@ import time #Tempo
 import random #Randomizar Senha
 import hashlib #Criptografia
 
-'''#Boas Vindas -----------------------------------
+#Boas Vindas -----------------------------------
 
 print('\033[33m-=\033[m'*15)
 print('   Seja Muito Bem Vindo(a) ')
@@ -110,7 +110,7 @@ else:
         print(letra, end='', flush=True)
         time.sleep(0.03)
 print('')
-'''
+
 #Menu do Sistema -----------------------------------
 
 while True:
