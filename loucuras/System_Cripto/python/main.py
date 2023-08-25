@@ -6,8 +6,9 @@ import string #Criar strings
 import time #Tempo
 import random #Randomizar Senha
 import hashlib #Criptografia
+import os.path
 
-#Boas Vindas -----------------------------------
+'''#Boas Vindas -----------------------------------
 
 print('\033[33m-=\033[m'*15)
 print('   Seja Muito Bem Vindo(a) ')
@@ -29,6 +30,16 @@ print("[ 2 ] - Para Feminino ")
 print('\033[33m-=\033[m'*20)
 sexoia = int(input('Opção: '))
 print('')
+
+while sexoia != 1 and sexoia != 2:
+    print('Altenativa Inválida. Tente novamente!')
+    print()
+    print('\033[33m-=\033[m'*20)
+    print("Escolha o sexo da sua(seu) Assistente! ") 
+    print("[ 1 ] - Para Masculino ")
+    print("[ 2 ] - Para Feminino ")
+    print('\033[33m-=\033[m'*20)
+    sexoia = int(input('Opção: '))
 
 if sexoia == 1:
     print('\033[33m-=\033[m'*20)
@@ -97,7 +108,7 @@ for letra in frase1:
     print(letra, end='', flush=True)
     time.sleep(0.03)
 
-nome = str(input(f'\n{ia}: Qual o seu nome? ')).strip()
+nome = str(input(f'\n{ia}: Qual o seu nome ? ')).strip()
 
 if nome.lower() == ia.lower():
     conv1 = f'{ia}: Nossa que nome bonito hehe!'
@@ -110,31 +121,39 @@ else:
         print(letra, end='', flush=True)
         time.sleep(0.03)
 print('')
-
+'''
 #Menu do Sistema -----------------------------------
 
 while True:
     print('\033[34m-=\033[m'*15)
     print('[ 1 ] - Minerar')
-    print('[ 2 ] - Ver Saldo')
-    print('[ 3 ] - Depositar')
-    print('[ 4 ] - Sacar')
-    print('[ 5 ] - Transferir')
+    print('[ 2 ] - Transferir')
+    print('[ 3 ] - Ver Saldo')
+    print('[ 0 ] - Sair!!')
     print('\033[34m-=\033[m'*15)
     op = int(input('Opção: '))
     
-    if op != 1 and op != 2 and op != 3 and op != 4 and op != 5:
-        print('Alternativa inválida. Tente novamente!')
-    
-#Sistema de Mineração -----------------------------------
+    if op == 0:
+        print('Saindo', end='')
+        for _ in range(3):
+            print('.', end='', flush=True)
+            sleep(0.8)
+        exit()
+#Condição de erro -----------------------------------
 
+    elif op != 1 and op != 2 and op != 3 and op != 4 and op != 5:
+        print('Alternativa inválida. Tente novamente!')
+
+#Sistema de Mineração -----------------------------------
+    
     elif op == 1:
 
         print('A mineração começará em...')
         
-        '''for cont in range(5, 0, -1):
+        for cont in range(5, 0, -1):
             print(cont)
-            sleep(1)'''
+            sleep(1)
+        
         code1 = '10 reais'
         code2 = '20 reais'
         code3 = '30 reais'
@@ -145,6 +164,17 @@ while True:
         code8 = '80 reais'
         code9 = '90 reais'
         code10 = '100 reais'
+
+        global cripto1
+        global cripto2
+        global cripto3
+        global cripto4
+        global cripto5
+        global cripto6
+        global cripto7
+        global cripto8
+        global cripto9
+        global cripto10
 
         cripto1 = sha256(code1.encode()).hexdigest()
         cripto2 = sha256(code2.encode()).hexdigest()
@@ -172,7 +202,7 @@ while True:
         while True:
             tentativas += 1
             chave_random = gerador_de_senhas(tamanho_chave)
-            chave_hashed = sha256_hash(chave_random)
+            chave_hashed = cripto1
 
             if chave_hashed == cripto1:
                 print('\033[32m' + cripto1 + '\033[m')
@@ -227,7 +257,71 @@ while True:
             else:
                 print('\033[31m' + chave_hashed + '\033[m')
                 sleep(0.1)
-
+        
         with open('Cripto.txt', 'w') as save:
             save.write(''.join(map(str, find)))
         
+#Transferencia -----------------------------------        
+    
+    elif op == 2:
+
+        while True:
+            print('\033[34m-=\033[m'*25)
+            print('Escolha para quem você vai fazer Transferência!')
+            print('[ 1 ] - Daniel')
+            print('[ 2 ] - Laura')
+            print('[ 3 ] - Matheus')
+            print('[ 4 ] - Roberto')
+            print('[ 5 ] - Isa')
+            print('[ 0 ] - Sair!!')
+            print('\033[34m-=\033[m'*25)
+            transferencia = int(input("Opção:"))
+
+            if transferencia == 0:
+                print('Saindo', end='')
+                for _ in range(3):
+                    print('.', end='', flush=True)
+                    sleep(0.8)
+                print('')
+                break
+
+#Condição de erro -----------------------------------
+
+            elif transferencia != 1 and transferencia != 2 and transferencia != 3 and transferencia != 4 and transferencia != 5:
+               print("Alternativa Inválida!!")
+
+#----------------------------------------------------
+            else:
+                valor_transferencia = float(input("Valor da Transfencia: R$"))
+                valor_moeda = 0.00094 
+                print(f'R${valor_transferencia} em criptomoeda será {valor_moeda * valor_transferencia}Jz')
+
+#Ver Saldo -------------------------------------------
+
+    elif op == 3:
+        find_past = os.path.isfile('Cripto.txt')
+        
+
+        if find_past == True:
+            read_past = ('Cripto.txt').read()
+
+            if read_past == cripto1:
+                print(f'Seu saldo é de R$10 em Cripto você tem {valor_moeda * 10}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$20 em Cripto você tem {valor_moeda * 20}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$30 em Cripto você tem {valor_moeda * 30}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$40 em Cripto você tem {valor_moeda * 40}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$50 em Cripto você tem {valor_moeda * 50}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$60 em Cripto você tem {valor_moeda * 60}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$70 em Cripto você tem {valor_moeda * 70}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$80 em Cripto você tem {valor_moeda * 80}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$90 em Cripto você tem {valor_moeda * 90}')
+            elif read_past == cripto2:
+                print(f'Seu saldo é de R$100 em Cripto você tem {valor_moeda * 10}')
