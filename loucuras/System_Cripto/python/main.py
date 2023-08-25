@@ -172,7 +172,7 @@ while True:
         while True:
             tentativas += 1
             chave_random = gerador_de_senhas(tamanho_chave)
-            chave_hashed = cripto1
+            chave_hashed = sha256_hash(chave_random)
 
             if chave_hashed == cripto1:
                 print('\033[32m' + cripto1 + '\033[m')
@@ -182,38 +182,47 @@ while True:
             elif chave_hashed == cripto2:
                 print('\033[32m' + cripto2 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto3:
                 print('\033[32m' + cripto3 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto4:
                 print('\033[32m' + cripto4 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto5:
                 print('\033[32m' + crpto5 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto6:
                 print('\033[32m' + cripto6 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto7:
                 print('\033[32m' + cripto7 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto8:
                 print('\033[32m' + cripto8 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto9:
                 print('\033[32m' + cripto9 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             elif chave_hashed == cripto10:
                 print('\033[32m' + cripto10 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
+                find.append(chave_hashed)
                 break
             else:
                 print('\033[31m' + chave_hashed + '\033[m')
