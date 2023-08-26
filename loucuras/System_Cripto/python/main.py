@@ -8,7 +8,7 @@ import random #Randomizar Senha
 import hashlib #Criptografia
 import os.path
 
-'''#Boas Vindas -----------------------------------
+#Boas Vindas -----------------------------------
 
 print('\033[33m-=\033[m'*15)
 print('   Seja Muito Bem Vindo(a) ')
@@ -122,7 +122,7 @@ else:
         print(letra, end='', flush=True)
         time.sleep(0.03)
 print('')
-'''
+
 #Menu do Sistema -----------------------------------
 
 code1 = '10 reais'
@@ -150,9 +150,6 @@ cripto10 = sha256(code10.encode()).hexdigest()
 valor_moeda = 0.00094 
 valor_transferencia = 0
 
-with open('Discripto.txt', 'w') as dinheiro:
-    dinheiro.write('0')
-
 while True:
 
     print('\033[34m-=\033[m'*15)
@@ -164,7 +161,7 @@ while True:
     op = int(input('Opção: '))
     
     if op == 0:
-        print('Saindo', end='')
+        print('Tchau, Tchau', end='')
         for _ in range(3):
             print('.', end='', flush=True)
             sleep(0.8)
@@ -199,74 +196,164 @@ while True:
         while True:
             tentativas += 1
             chave_random = gerador_de_senhas(tamanho_chave)
-            chave_hashed = sha256_hash(chave_random)
+            chave_hashed = cripto1
 
             if chave_hashed == cripto1:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('10')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 10}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('10')
                 print('\033[32m' + cripto1 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto2:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('20')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 20}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('20')
                 print('\033[32m' + cripto2 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto3:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('30')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 30}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('30')
                 print('\033[32m' + cripto3 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto4:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('40')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 40}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('40')
                 print('\033[32m' + cripto4 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto5:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('50')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 50}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('50')
                 print('\033[32m' + cripto5 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto6:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('60')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 60}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('60')
                 print('\033[32m' + cripto6 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto7:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('70')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 70}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('70')
                 print('\033[32m' + cripto7 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto8:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('80')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 80}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('80')
                 print('\033[32m' + cripto8 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto9:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('90')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 90}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('90')
                 print('\033[32m' + cripto9 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto10:
-                with open('Discripto.txt', 'w') as dinheiro:
-                    dinheiro.write('100')
+                find_discript = os.path.isfile('Discripto.txt')
+
+                if find_discript == True:
+                    with open('Discripto.txt', 'r') as modify:
+                        modificar = modify.read()
+                        to_modify = float(modificar)
+                    with open('Discripto.txt', 'w') as alterar:
+                        alterar.write(f'{to_modify + 100}')
+                else:
+                    with open('Discripto.txt', 'w') as dinheiro:
+                        dinheiro.write('100')
                 print('\033[32m' + cripto10 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
@@ -322,11 +409,17 @@ while True:
                 match verificar:
                     
                     case 1:
-                        if dinheiro - valor_transferencia >= 0:
-                            dinheiro -= valor_transferencia
+                        with open('Discripto.txt', 'r') as arquivo_descriptografado:
+                            dinheiro = arquivo_descriptografado.read()
+
+                        money_convert = float(dinheiro)
+                        if money_convert - valor_transferencia >= 0:
+                            with open('Discripto.txt', 'w') as arquivo_descriptografado:
+                                arquivo_descriptografado.write(f'{money_convert - valor_transferencia}')
+
                             print('Ok. Transação completa!')
                         else:
-                            print(f'A transação não pôde ser completada.\nVocê tem apenas R${dinheiro} para fazer uma transação de R${valor_transferencia}!!')
+                            print(f'A transação não pôde ser completada.\nVocê tem apenas R${money_convert} para fazer uma transação de R${valor_transferencia}!!')
                             break
                     case 2:
                         print('Cancelando Transação', end='')
@@ -348,7 +441,7 @@ while True:
             with open('Discripto.txt', 'r') as arquivo_descriptografado:
                     read_discripto = arquivo_descriptografado.read()
 
-            convert = int(read_discripto)           
+            convert = float(read_discripto)      
 
             if read_past == cripto1:
                 with open('Discripto.txt', 'r') as read_discripto:
