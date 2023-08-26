@@ -8,7 +8,7 @@ import random #Randomizar Senha
 import hashlib #Criptografia
 import os.path
 
-'''#Boas Vindas -----------------------------------
+#Boas Vindas -----------------------------------
 
 print('\033[33m-=\033[m'*15)
 print('   Seja Muito Bem Vindo(a) ')
@@ -109,6 +109,7 @@ for letra in frase1:
     time.sleep(0.03)
 
 nome = str(input(f'\n{ia}: Qual o seu nome ? ')).strip()
+dnome = nome.split()
 
 if nome.lower() == ia.lower():
     conv1 = f'{ia}: Nossa que nome bonito hehe!'
@@ -116,15 +117,42 @@ if nome.lower() == ia.lower():
         print(letra, end='', flush=True)
         time.sleep(0.03)
 else:
-    conv1 = f'{ia}: É um prazer conhecer você {nome}'
+    conv1 = f'{ia}: É um prazer conhecer você {dnome[0]}'
     for letra in conv1:
         print(letra, end='', flush=True)
         time.sleep(0.03)
 print('')
-'''
+
 #Menu do Sistema -----------------------------------
 
+code1 = '10 reais'
+code2 = '20 reais'
+code3 = '30 reais'
+code4 = '40 reais'
+code5 = '50 reais'
+code6 = '60 reais'
+code7 = '70 reais'
+code8 = '80 reais'
+code9 = '90 reais'
+code10 = '100 reais'
+
+cripto1 = sha256(code1.encode()).hexdigest()
+cripto2 = sha256(code2.encode()).hexdigest()
+cripto3 = sha256(code3.encode()).hexdigest()
+cripto4 = sha256(code4.encode()).hexdigest()
+cripto5 = sha256(code5.encode()).hexdigest()
+cripto6 = sha256(code6.encode()).hexdigest()
+cripto7 = sha256(code7.encode()).hexdigest()
+cripto8 = sha256(code8.encode()).hexdigest()
+cripto9 = sha256(code9.encode()).hexdigest()
+cripto10 = sha256(code10.encode()).hexdigest()
+
+valor_moeda = 0.00094 
+valor_transferencia = 0
+dinheiro = 0
+
 while True:
+
     print('\033[34m-=\033[m'*15)
     print('[ 1 ] - Minerar')
     print('[ 2 ] - Transferir')
@@ -145,7 +173,7 @@ while True:
         print('Alternativa inválida. Tente novamente!')
 
 #Sistema de Mineração -----------------------------------
-    
+
     elif op == 1:
 
         print('A mineração começará em...')
@@ -153,39 +181,6 @@ while True:
         for cont in range(5, 0, -1):
             print(cont)
             sleep(1)
-        
-        code1 = '10 reais'
-        code2 = '20 reais'
-        code3 = '30 reais'
-        code4 = '40 reais'
-        code5 = '50 reais'
-        code6 = '60 reais'
-        code7 = '70 reais'
-        code8 = '80 reais'
-        code9 = '90 reais'
-        code10 = '100 reais'
-
-        global cripto1
-        global cripto2
-        global cripto3
-        global cripto4
-        global cripto5
-        global cripto6
-        global cripto7
-        global cripto8
-        global cripto9
-        global cripto10
-
-        cripto1 = sha256(code1.encode()).hexdigest()
-        cripto2 = sha256(code2.encode()).hexdigest()
-        cripto3 = sha256(code3.encode()).hexdigest()
-        cripto4 = sha256(code4.encode()).hexdigest()
-        cripto5 = sha256(code5.encode()).hexdigest()
-        cripto6 = sha256(code6.encode()).hexdigest()
-        cripto7 = sha256(code7.encode()).hexdigest()
-        cripto8 = sha256(code8.encode()).hexdigest()
-        cripto9 = sha256(code9.encode()).hexdigest()
-        cripto10 = sha256(code10.encode()).hexdigest()
 
         def gerador_de_senhas(tamanho):
             caracteres = string.ascii_letters + string.digits
@@ -205,51 +200,61 @@ while True:
             chave_hashed = cripto1
 
             if chave_hashed == cripto1:
+                dinheiro = 10
                 print('\033[32m' + cripto1 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto2:
+                dinheiro = 20
                 print('\033[32m' + cripto2 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto3:
+                dinheiro = 30
                 print('\033[32m' + cripto3 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto4:
+                dinheiro = 40
                 print('\033[32m' + cripto4 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto5:
+                dinheiro = 50
                 print('\033[32m' + cripto5 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto6:
+                dinheiro = 60
                 print('\033[32m' + cripto6 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto7:
+                dinheiro = 70
                 print('\033[32m' + cripto7 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto8:
+                dinheiro = 80
                 print('\033[32m' + cripto8 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto9:
+                dinheiro = 90
                 print('\033[32m' + cripto9 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
                 break
             elif chave_hashed == cripto10:
+                dinheiro = 100
                 print('\033[32m' + cripto10 + '\033[m')
                 print(f'A chave foi encontrada com {tentativas} tentativas')
                 find.append(chave_hashed)
@@ -275,7 +280,7 @@ while True:
             print('[ 5 ] - Isa')
             print('[ 0 ] - Sair!!')
             print('\033[34m-=\033[m'*25)
-            transferencia = int(input("Opção:"))
+            transferencia = int(input("Opção: "))
 
             if transferencia == 0:
                 print('Saindo', end='')
@@ -293,35 +298,73 @@ while True:
 #----------------------------------------------------
             else:
                 valor_transferencia = float(input("Valor da Transfencia: R$"))
-                valor_moeda = 0.00094 
                 print(f'R${valor_transferencia} em criptomoeda será {valor_moeda * valor_transferencia}Jz')
+
+                print('\033[34m-=\033[m'*25)
+                print('Você tem certeza que quer continuar?')
+                print('[ 1 ] - Sim')
+                print('[ 2 ] - Não')
+                print('\033[34m-=\033[m'*25)
+                verificar = int(input('Opção: '))
+
+                match verificar:
+                    
+                    case 1:
+                        if dinheiro - valor_transferencia >= 0:
+                            dinheiro -= valor_transferencia
+                            print('Ok. Transação completa!')
+                        else:
+                            print(f'A transação não pôde ser completada.\nVocê tem apenas R${dinheiro} para fazer uma transação de R${valor_transferencia}!!')
+                            break
+                    case 2:
+                        print('Cancelando Transação', end='')
+                        for _ in range(3):
+                            print('.', end='', flush=True)
+                            time.sleep(0.3)
+                        print('')
+                        break
+
 
 #Ver Saldo -------------------------------------------
 
     elif op == 3:
         find_past = os.path.isfile('Cripto.txt')
         
-
         if find_past == True:
-            read_past = ('Cripto.txt').read()
-
+            with open('Cripto.txt', 'r') as arquivo_criptografado:
+                read_past = arquivo_criptografado.read()
+            
             if read_past == cripto1:
-                print(f'Seu saldo é de R$10 em Cripto você tem {valor_moeda * 10}')
+                dinheiro = 10 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
             elif read_past == cripto2:
-                print(f'Seu saldo é de R$20 em Cripto você tem {valor_moeda * 20}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$30 em Cripto você tem {valor_moeda * 30}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$40 em Cripto você tem {valor_moeda * 40}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$50 em Cripto você tem {valor_moeda * 50}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$60 em Cripto você tem {valor_moeda * 60}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$70 em Cripto você tem {valor_moeda * 70}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$80 em Cripto você tem {valor_moeda * 80}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$90 em Cripto você tem {valor_moeda * 90}')
-            elif read_past == cripto2:
-                print(f'Seu saldo é de R$100 em Cripto você tem {valor_moeda * 10}')
+                dinheiro = 20 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto3:
+                dinheiro = 30 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto4:
+                dinheiro = 40 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto5:
+                dinheiro = 50 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto6:
+                dinheiro = 60 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto7:
+                dinheiro = 70 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto8:
+                dinheiro = 80 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto9:
+                dinheiro = 90 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+            elif read_past == cripto10:
+                dinheiro = 100 - valor_transferencia
+                print(f'Seu saldo é de R${dinheiro} em Cripto você tem {valor_moeda * dinheiro}')
+
+        else:
+            print('\033[31mO arquivo "Cripto.txt" não existe. Tente encontrar alguma Criptomoeda primeiro!\033[m')
+            
