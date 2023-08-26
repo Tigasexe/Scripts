@@ -196,7 +196,7 @@ while True:
         while True:
             tentativas += 1
             chave_random = gerador_de_senhas(tamanho_chave)
-            chave_hashed = cripto1
+            chave_hashed = sha256_hash(chave_random)
 
             if chave_hashed == cripto1:
                 find_discript = os.path.isfile('Discripto.txt')
@@ -409,18 +409,24 @@ while True:
                 match verificar:
                     
                     case 1:
-                        with open('Discripto.txt', 'r') as arquivo_descriptografado:
-                            dinheiro = arquivo_descriptografado.read()
+                        find_arq = os.path.isfile('Discripto.txt')
 
-                        money_convert = float(dinheiro)
-                        if money_convert - valor_transferencia >= 0:
-                            with open('Discripto.txt', 'w') as arquivo_descriptografado:
-                                arquivo_descriptografado.write(f'{money_convert - valor_transferencia}')
+                        if find_arq == True:
 
-                            print('Ok. Transação completa!')
+                            with open('Discripto.txt', 'r') as arquivo_descriptografado:
+                                dinheiro = arquivo_descriptografado.read()
+
+                            money_convert = float(dinheiro)
+                            if money_convert - valor_transferencia >= 0:
+                                with open('Discripto.txt', 'w') as arquivo_descriptografado:
+                                    arquivo_descriptografado.write(f'{money_convert - valor_transferencia}')
+
+                                print('Ok. Transação completa!')
+                            else:
+                                print(f'A transação não pôde ser completada.\nVocê tem apenas R${money_convert} para fazer uma transação de R${valor_transferencia}!!')
+                                break
                         else:
-                            print(f'A transação não pôde ser completada.\nVocê tem apenas R${money_convert} para fazer uma transação de R${valor_transferencia}!!')
-                            break
+                            print('\033[31mNão foi possivel encontrar seu saldo. Tente minerar primeiro!')
                     case 2:
                         print('Cancelando Transação', end='')
                         for _ in range(3):
