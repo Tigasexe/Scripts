@@ -14,9 +14,7 @@ print('\033[33m-=\033[m'*15)
 print('   Seja Muito Bem Vindo(a) ')
 print('             Ao')
 print(' Nosso Sistema de Criptomoeda!')
-print('\033[33m-=\033[m'*15)
-print('')
-time.sleep(1)
+time.sleep(0.4)
 
 ia = ''
 sexoia = ''
@@ -28,8 +26,15 @@ print("Escolha o sexo da sua(seu) Assistente! ")
 print("[ 1 ] - Para Masculino ")
 print("[ 2 ] - Para Feminino ")
 print('\033[33m-=\033[m'*20)
-sexoia = int(input('Opção: '))
-print('')
+try:
+    sexoia = int(input('Opção: '))
+except:
+    print('Tente colocar um numero inteiro na proxima!')
+    fechando = 'Fechando o sistema...'
+    for letra in fechando:
+        print('\033[31m' + letra + '\033[m', end='', flush=True)
+        time.sleep(0.1)
+    exit()
 
 while sexoia != 1 and sexoia != 2:
     print('Altenativa Inválida. Tente novamente!')
@@ -39,7 +44,15 @@ while sexoia != 1 and sexoia != 2:
     print("[ 1 ] - Para Masculino ")
     print("[ 2 ] - Para Feminino ")
     print('\033[33m-=\033[m'*20)
-    sexoia = int(input('Opção: '))
+    try:
+        sexoia = int(input('Opção: '))
+    except:
+        print('Tente colocar um numero inteiro na proxima!')
+        fechando = 'Fechando o sistema...'
+        for letra in fechando:
+            print('\033[31m' + letra + '\033[m', end='', flush=True)
+            time.sleep(0.1)
+        exit()
 
 if sexoia == 1:
     print('\033[33m-=\033[m'*20)
@@ -49,8 +62,15 @@ if sexoia == 1:
     print("[ 3 ] - Louis")
     print("[ 4 ] - Ziggy")
     print('\033[33m-=\033[m'*20)
-    nomeia = int(input("Opção: "))
-    
+    try:
+        nomeia = int(input("Opção: "))
+    except:
+        print('Tente colocar um numero inteiro na proxima!')
+        fechando = 'Fechando o sistema...'
+        for letra in fechando:
+            print('\033[31m' + letra + '\033[m', end='', flush=True)
+            time.sleep(0.1)
+        exit()
     while nomeia != 1 and nomeia != 2 and nomeia != 3 and nomeia != 4:
         print('Alternativa inválida. Tente novamente!!')
         print('\033[33m-=\033[m'*20)
@@ -60,7 +80,15 @@ if sexoia == 1:
         print("[ 3 ] - Louis")
         print("[ 4 ] - Ziggy")
         print('\033[33m-=\033[m'*20)
-        nomeia = int(input("Opção: "))
+        try:
+            nomeia = int(input("Opção: "))
+        except:
+            print('Tente colocar um numero inteiro na proxima!')
+            fechando = 'Fechando o sistema...'
+            for letra in fechando:
+                print('\033[31m' + letra + '\033[m', end='', flush=True)
+                time.sleep(0.1)
+            exit()
 
     if nomeia == 1:
         ia = "Jarvis"
@@ -79,8 +107,16 @@ elif sexoia == 2:
     print("[ 3 ] - Athena")
     print("[ 4 ] - Iris")
     print('\033[33m-=\033[m'*20)
-    nomeia = int(input("Opção: "))
-    
+    try:
+        nomeia = int(input("Opção: "))
+    except:
+        print('Tente colocar um numero inteiro na proxima!')
+        fechando = 'Fechando o sistema...'
+        for letra in fechando:
+            print('\033[31m' + letra + '\033[m', end='', flush=True)
+            time.sleep(0.1)
+        exit()
+
     while nomeia != 1 and nomeia != 2 and nomeia != 3 and nomeia != 4:
         print("Alternativa inválida. Tente novamente!!")
         print('\033[33m-=\033[m'*20)
@@ -90,7 +126,15 @@ elif sexoia == 2:
         print("[ 3 ] - Athena")
         print("[ 4 ] - Iris")
         print('\033[33m-=\033[m'*20)
-        nomeia = int(input("Opção: "))
+        try:
+            nomeia = int(input("Opção: "))
+        except:
+            print('Tente colocar um numero inteiro na proxima!')
+            fechando = 'Fechando o sistema...'
+            for letra in fechando:
+                print('\033[31m' + letra + '\033[m', end='', flush=True)
+                time.sleep(0.1)
+            exit()
 
     if nomeia == 1:
         ia = "Aurora"
@@ -108,8 +152,25 @@ for letra in frase1:
     print(letra, end='', flush=True)
     time.sleep(0.03)
 
-nome = str(input(f'\n{ia}: Qual o seu nome ? ')).strip()
+try:
+    nome = str(input(f'\n{ia}: Qual o seu nome ? ')).strip()
+except:
+    print('Tente colocar um numero inteiro na proxima!')
+    fechando = 'Fechando o sistema...'
+    for letra in fechando:
+        print('\033[31m' + letra + '\033[m', end='', flush=True)
+        time.sleep(0.1)
+    exit()
+
 dnome = nome.split()
+
+if len(nome) == 0:
+    print('Tente colocar um numero inteiro na proxima!')
+    fechando = 'Fechando o sistema...'
+    for letra in fechando:
+        print('\033[31m' + letra + '\033[m', end='', flush=True)
+        time.sleep(0.1)
+    exit()
 
 if nome.lower() == ia.lower():
     conv1 = f'{ia}: Nossa que nome bonito hehe!'
@@ -158,8 +219,16 @@ while True:
     print('[ 3 ] - Ver Saldo')
     print('[ 0 ] - Sair!!')
     print('\033[34m-=\033[m'*15)
-    op = int(input('Opção: '))
-    
+    try:
+        op = int(input('Opção: '))
+    except:
+        print('Tente colocar um numero inteiro na proxima!')
+        fechando = 'Fechando o sistema...'
+        for letra in fechando:
+            print('\033[31m' + letra + '\033[m', end='', flush=True)
+            time.sleep(0.1)
+        exit()
+        
     if op == 0:
         print('Tchau, Tchau', end='')
         for _ in range(3):
@@ -379,8 +448,15 @@ while True:
             print('[ 5 ] - Isa')
             print('[ 0 ] - Sair!!')
             print('\033[34m-=\033[m'*25)
-            transferencia = int(input("Opção: "))
-
+            try:
+                transferencia = int(input("Opção: "))
+            except:
+                print('Tente colocar um numero inteiro na proxima!')
+                fechando = 'Fechando o sistema...'
+                for letra in fechando:
+                    print('\033[31m' + letra + '\033[m', end='', flush=True)
+                    time.sleep(0.1)
+                exit()
             if transferencia == 0:
                 print('Saindo', end='')
                 for _ in range(3):
@@ -404,10 +480,17 @@ while True:
                 print('[ 1 ] - Sim')
                 print('[ 2 ] - Não')
                 print('\033[34m-=\033[m'*25)
-                verificar = int(input('Opção: '))
+                try:
+                    verificar = int(input('Opção: '))
+                except:
+                    print('Tente colocar um numero inteiro na proxima!')
+                    fechando = 'Fechando o sistema...'
+                    for letra in fechando:
+                        print('\033[31m' + letra + '\033[m', end='', flush=True)
+                        time.sleep(0.1)
+                    exit()
 
                 match verificar:
-                    
                     case 1:
                         find_arq = os.path.isfile('Discripto.txt')
 
@@ -434,7 +517,12 @@ while True:
                             time.sleep(0.3)
                         print('')
                         break
-
+                    case _:
+                        invalida = '\033[31mAlternativa inválida!\033[m'
+                        for letra in invalida:
+                            print(letra, end='', flush=True)
+                            time.sleep(0.09)
+                        print()
 
 #Ver Saldo -------------------------------------------
 
