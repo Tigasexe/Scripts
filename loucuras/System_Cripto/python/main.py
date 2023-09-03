@@ -38,7 +38,6 @@ except:
 
 while sexoia != 1 and sexoia != 2:
     print('Altenativa Inválida. Tente novamente!')
-    print()
     print('\033[33m-=\033[m'*20)
     print("Escolha o sexo da sua(seu) Assistente! ") 
     print("[ 1 ] - Para Masculino ")
@@ -214,6 +213,7 @@ valor_transferencia = 0
 while True:
 
     print('\033[34m-=\033[m'*15)
+    print('Oque você deseja fazer nesse sistema?')
     print('[ 1 ] - Minerar')
     print('[ 2 ] - Transferir')
     print('[ 3 ] - Ver Saldo')
