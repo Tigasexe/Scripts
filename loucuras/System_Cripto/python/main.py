@@ -20,7 +20,7 @@ try:
     sexoia = ''
 
     #Sexo IA -----------------------------------
-
+    #Poo Aqui!!
     print('\033[33m-=\033[m'*20)
     print("Escolha o sexo da sua(seu) Assistente! ") 
     print("[ 1 ] - Para Masculino ")
@@ -265,7 +265,7 @@ try:
             while True:
                 tentativas += 1
                 chave_random = gerador_de_senhas(tamanho_chave)
-                chave_hashed = sha256_hash(chave_random)
+                chave_hashed = cripto1
 
                 if chave_hashed == cripto1:
                     find_discript = os.path.isfile('Discripto.txt')
