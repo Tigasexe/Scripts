@@ -2,7 +2,7 @@
 
 from hashlib import sha256 #Criptografia
 from time import sleep #Tempo
-from ia import Ia
+from ia import Ia #POO
 import string #Criar strings
 import time #Tempo
 import random #Randomizar Senha
@@ -86,13 +86,8 @@ try:
             ia = "Ziggy"
 
     elif sexoia == 2:
-        print('\033[33m-=\033[m'*20)
-        print("Escolha o nome da sua Assistente!") 
-        print("[ 1 ] - Aurora")
-        print("[ 2 ] - Serena")
-        print("[ 3 ] - Athena")
-        print("[ 4 ] - Iris")
-        print('\033[33m-=\033[m'*20)
+        ia.sexoiaf()
+        
         try:
             nomeia = int(input("Opção: "))
         except:
@@ -105,13 +100,8 @@ try:
 
         while nomeia != 1 and nomeia != 2 and nomeia != 3 and nomeia != 4:
             print("Alternativa inválida. Tente novamente!!")
-            print('\033[33m-=\033[m'*20)
-            print("Escolha o nome da sua Assistente!") 
-            print("[ 1 ] - Aurora")
-            print("[ 2 ] - Serena")
-            print("[ 3 ] - Athena")
-            print("[ 4 ] - Iris")
-            print('\033[33m-=\033[m'*20)
+            ia.sexoiaf()
+
             try:
                 nomeia = int(input("Opção: "))
             except:
@@ -433,7 +423,7 @@ try:
                 print('[ 3 ] - Matheus')
                 print('[ 4 ] - Roberto')
                 print('[ 5 ] - Isa')
-                print('[ 0 ] - Sair!!')
+                print('[ 0 ] - Voltar')
                 print('\033[34m-=\033[m'*25)
                 try:
                     transferencia = int(input("Opção: "))
@@ -497,6 +487,7 @@ try:
                                     break
                             else:
                                 print('\033[31mNão foi possivel encontrar seu saldo. Tente minerar primeiro!')
+                                break
                         case 2:
                             print('Cancelando Transação', end='')
                             for _ in range(3):

@@ -12,6 +12,13 @@ class Ia:
         print("[ 3 ] - Louis")
         print("[ 4 ] - Ziggy")
         print('\033[33m-=\033[m'*20)
-        
+    def sexoiaf(self):
+        print('\033[33m-=\033[m'*20)
+        print("Escolha o nome da sua Assistente!") 
+        print("[ 1 ] - Aurora")
+        print("[ 2 ] - Serena")
+        print("[ 3 ] - Athena")
+        print("[ 4 ] - Iris")
+        print('\033[33m-=\033[m'*20)
     
     

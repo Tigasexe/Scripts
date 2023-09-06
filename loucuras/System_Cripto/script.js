@@ -31,7 +31,6 @@ function logar() {
     let usuario = document.getElementById('usuario').value
     let senha = document.getElementById('senha').value
 
-
     if (usuario != localStorage.user || senha != localStorage.pass) {
         txt.style.opacity = '100'
         txt.style.color = 'red'
@@ -49,7 +48,7 @@ function logar() {
         txt.style.color = 'green'
         txt.style.fontSize = '14pt'
         eye.style.top = '50.2%'
-        location.href = 'python/main.py'
+        location.href = "python"
         txt.innerHTML = 'Logado com Sucesso!'
     }
 }
