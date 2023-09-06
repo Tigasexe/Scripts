@@ -2,6 +2,7 @@
 
 from hashlib import sha256 #Criptografia
 from time import sleep #Tempo
+from ia import Ia
 import string #Criar strings
 import time #Tempo
 import random #Randomizar Senha
@@ -14,18 +15,17 @@ try:
     print('   Seja Muito Bem Vindo(a) ')
     print('             Ao')
     print(' Nosso Sistema de Criptomoeda!')
-    time.sleep(0.4)
+    print('\033[33m-=\033[m'*20)
+
+    time.sleep(0.2)
 
     ia = ''
     sexoia = ''
 
     #Sexo IA -----------------------------------
-    #Poo Aqui!!
-    print('\033[33m-=\033[m'*20)
-    print("Escolha o sexo da sua(seu) Assistente! ") 
-    print("[ 1 ] - Para Masculino ")
-    print("[ 2 ] - Para Feminino ")
-    print('\033[33m-=\033[m'*20)
+    ia = Ia()
+    ia.esexoia()
+
     try:
         sexoia = int(input('Opção: '))
     except:
@@ -38,11 +38,8 @@ try:
 
     while sexoia != 1 and sexoia != 2:
         print('Altenativa Inválida. Tente novamente!')
-        print('\033[33m-=\033[m'*20)
-        print("Escolha o sexo da sua(seu) Assistente! ") 
-        print("[ 1 ] - Para Masculino ")
-        print("[ 2 ] - Para Feminino ")
-        print('\033[33m-=\033[m'*20)
+        ia.esexoia()
+
         try:
             sexoia = int(input('Opção: '))
         except:
@@ -54,13 +51,8 @@ try:
             exit()
 
     if sexoia == 1:
-        print('\033[33m-=\033[m'*20)
-        print("Escolha o nome da seu Assistente! ") 
-        print("[ 1 ] - Jarvis")
-        print("[ 2 ] - Alfred")
-        print("[ 3 ] - Louis")
-        print("[ 4 ] - Ziggy")
-        print('\033[33m-=\033[m'*20)
+        ia.sexoiam()
+
         try:
             nomeia = int(input("Opção: "))
         except:
@@ -72,13 +64,8 @@ try:
             exit()
         while nomeia != 1 and nomeia != 2 and nomeia != 3 and nomeia != 4:
             print('Alternativa inválida. Tente novamente!!')
-            print('\033[33m-=\033[m'*20)
-            print("Escolha o nome do seu Assistente!") 
-            print("[ 1 ] - Jarvis")
-            print("[ 2 ] - Alfred")
-            print("[ 3 ] - Louis")
-            print("[ 4 ] - Ziggy")
-            print('\033[33m-=\033[m'*20)
+            ia.sexoiam()
+            
             try:
                 nomeia = int(input("Opção: "))
             except:
