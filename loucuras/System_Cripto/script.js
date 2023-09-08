@@ -48,7 +48,9 @@ function logar() {
         txt.style.color = 'green'
         txt.style.fontSize = '14pt'
         eye.style.top = '50.2%'
-        location.href = "python"
+        location.href = `${'python/main.py'}`
+        location.href = `${'python/ia.py'}`
+        location.href = `${'python/ia.py'}`
         txt.innerHTML = 'Logado com Sucesso!'
     }
 }
