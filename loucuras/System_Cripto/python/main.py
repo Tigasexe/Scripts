@@ -242,7 +242,7 @@ try:
             while True:
                 tentativas += 1
                 chave_random = gerador_de_senhas(tamanho_chave)
-                chave_hashed = cripto1
+                chave_hashed = sha256_hash(chave_random)
 
                 if chave_hashed == cripto1:
                     find_discript = os.path.isfile('Discripto.txt')

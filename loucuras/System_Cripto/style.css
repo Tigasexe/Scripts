@@ -104,7 +104,7 @@ body * {
     top: 51.5%;
     position: absolute; 
     font-size: 23px;
-    color: white;
+    color: #fff;
 }
 
 .btn-login {
@@ -125,11 +125,12 @@ body * {
 .btn-login:hover {
     cursor: pointer;
     font-size: 11pt;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
+    transition: 0.8s;
 }
 
 .registrar {
-    color: white;
+    color: #fff;
 }
 
 .registrar > a {
@@ -139,6 +140,16 @@ body * {
 
 .registrar > a:hover {
     font-size: 13pt;
+    transition: all 0.6s;
+}
+
+@media only screen and (max-width: 1357px) {
+    .card-login{
+        width: 75%;
+    }
+    .textfield > i {
+        left: 88%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {

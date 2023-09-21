@@ -97,10 +97,10 @@ body * {
 .textfield > i {
     cursor: pointer;
     left: 86%;
-    top: 50.5%;
+    top: 51.5%;
     position: absolute; 
     font-size: 23px;
-    color: white;
+    color: #fff;
 }
 
 .btn-reg {
@@ -121,11 +121,12 @@ body * {
 .btn-reg:hover {
     cursor: pointer;
     font-size: 11pt;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
+    transition: 0.8s;
 }
 
 .back-login {
-    color: white;
+    color: #fff;
 }
 
 .back-login > a {
@@ -135,6 +136,7 @@ body * {
 
 .back-login > a:hover {
     font-size: 13pt;
+    transition: all 0.6s;
 }
 
 @media only screen and (max-width: 950px) {
@@ -168,6 +170,13 @@ body * {
 
     .card-reg {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1357px) {
+    .textfield > i {
+        top: 50%;
+        left: 84%;
     }
 }
 
