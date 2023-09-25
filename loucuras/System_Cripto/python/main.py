@@ -5,9 +5,9 @@ from time import sleep #Tempo
 from ia import Ia #POO
 import string #Criar strings
 import time #Tempo
-import random #Randomizar Senha
+import random #Randomizar
 import hashlib #Criptografia
-import os.path
+import os.path #Sistema Operacional | Procurar Pasta
 
 #Boas Vindas -----------------------------------
 try:
