@@ -70,6 +70,7 @@ try:
             for _ in range(3):
                 print('.', end='', flush=True)
                 sleep(0.8)
+            print()
             exit()
 
     #Sistema de Mineração -----------------------------------
@@ -274,18 +275,75 @@ try:
                 print('\033[34m-=\033[m'*25)
                 print('Escolha para quem você vai fazer Transferência!')
                 nomeTranferência = str(input('Nome: '))
-                valor_transferencia = str(input('Valor: R$'))
+                valor_transferencia = float(input('Valor: R$'))
 
-                print('\033[34m-=\033[m'*25)
-                print('Você tem certeza que quer continuar?')
-                print('[ 1 ] - Sim')
-                print('[ 2 ] - Não')
-                print('\033[34m-=\033[m'*25)
+                find_arq = os.path.isfile('Discripto.txt')
 
-                try:
-                    op = int(input('Opção: '))
-                except:
-                    erro()
+                if find_arq == True:
+
+                    print('\033[34m-=\033[m'*25)
+                    print('Você tem certeza que quer continuar?')
+                    print('[ 1 ] - Sim')
+                    print('[ 2 ] - Não')
+                    print('\033[34m-=\033[m'*25)
+
+                    try:
+                        op = int(input('Opção: '))
+                    except:
+                        erro()
+
+                    if op == 1:
+                        with open('Discripto.txt', 'r') as arquivo_descriptografado:
+                            dinheiro = arquivo_descriptografado.read()
+                        
+                        # money = dinheiro
+                        money_convert = float(dinheiro)
+
+                        if money_convert - valor_transferencia >= 0:
+                            with open('Discripto.txt', 'w') as arquivo_descriptografado:
+                                arquivo_descriptografado.write(f'{money_convert - valor_transferencia}')
+
+                            correto = '\033[32mOk. Transação feita com sucesso\033[m'
+                            for letra in correto:
+                                print(letra, end='', flush=True)
+                                time.sleep(0.09)
+                            print()
+                            break
+                        else:
+                            print(f'A transação não pôde ser completada.\nVocê tem apenas R${money_convert} para fazer uma transação de R${valor_transferencia}!!')
+                            break
+
+                    elif op == 2:
+                        print('\033[34m-=\033[m'*25)
+                        print('Cancelando Transação', end='')
+                        for _ in range(3):
+                            print('.', end='', flush=True)
+                            time.sleep(0.3)
+                        print('')
+                        break
+
+                    else:
+                        print('\033[34m-=\033[m'*25)
+                        invalida = '\033[31mAlternativa inválida!\033[m'
+                        for letra in invalida:
+                            print(letra, end='', flush=True)
+                            time.sleep(0.09)
+                        print()
+
+                else:
+                    print('\033[34m-=\033[m'*25)
+                    inexistente = '\033[31mO arquivo "Discripto.txt" não foi encontrado\033[m'
+                    for letra in inexistente:
+                        print(letra, end='', flush=True)
+                        time.sleep(0.09)
+                    print()
+                    retente = '\033[31mTente minerar primeiro\033[m'
+                    for letra in retente:
+                        print(letra, end='', flush=True)
+                        time.sleep(0.09)
+                    print()
+                    break
+                    
 
     #Ver Saldo -------------------------------------------
 
