@@ -49,9 +49,6 @@ function logar() {
         txt.style.fontSize = '14pt'
         eye.style.top = '50.2%'
         location.href = `${'python/main.py'}`
-        setTimeout(()=>{
-            location.href = `${'python/ia.py'}`
-        }, 500)
         txt.innerHTML = 'Arquivos baixados com sucesso!'
     }
 }
