@@ -16,44 +16,43 @@ print('                 Ao')
 print('     Nosso Sistema de Criptomoeda!')
 time.sleep(0.2)
 
-while True:
-    try:
-        def erro():
-            print('Tente colocar um numero inteiro na proxima!')
-            fechando = 'Fechando o sistema...'
-            for letra in fechando:
-                print('\033[31m' + letra + '\033[m', end='', flush=True)
-                time.sleep(0.1)
-            
-        #Menu do Sistema -----------------------------------
 
-        code1 = '10 reais'
-        code2 = '20 reais'
-        code3 = '30 reais'
-        code4 = '40 reais'
-        code5 = '50 reais'
-        code6 = '60 reais'
-        code7 = '70 reais'
-        code8 = '80 reais'
-        code9 = '90 reais'
-        code10 = '100 reais'
+try:
+    def erro():
+        fechando = 'Tente colocar um numero inteiro na proxima!'
+        for letra in fechando:
+            print('\033[31m' + letra + '\033[m', end='', flush=True)
+            time.sleep(0.1)
+        
+    #Menu do Sistema -----------------------------------
 
-        cripto1 = sha256(code1.encode()).hexdigest()
-        cripto2 = sha256(code2.encode()).hexdigest()
-        cripto3 = sha256(code3.encode()).hexdigest()
-        cripto4 = sha256(code4.encode()).hexdigest()
-        cripto5 = sha256(code5.encode()).hexdigest()
-        cripto6 = sha256(code6.encode()).hexdigest()
-        cripto7 = sha256(code7.encode()).hexdigest()
-        cripto8 = sha256(code8.encode()).hexdigest()
-        cripto9 = sha256(code9.encode()).hexdigest()
-        cripto10 = sha256(code10.encode()).hexdigest()
+    code1 = '10 reais'
+    code2 = '20 reais'
+    code3 = '30 reais'
+    code4 = '40 reais'
+    code5 = '50 reais'
+    code6 = '60 reais'
+    code7 = '70 reais'
+    code8 = '80 reais'
+    code9 = '90 reais'
+    code10 = '100 reais'
 
-        valor_moeda = 0.00094 
-        valor_transferencia = 0
+    cripto1 = sha256(code1.encode()).hexdigest()
+    cripto2 = sha256(code2.encode()).hexdigest()
+    cripto3 = sha256(code3.encode()).hexdigest()
+    cripto4 = sha256(code4.encode()).hexdigest()
+    cripto5 = sha256(code5.encode()).hexdigest()
+    cripto6 = sha256(code6.encode()).hexdigest()
+    cripto7 = sha256(code7.encode()).hexdigest()
+    cripto8 = sha256(code8.encode()).hexdigest()
+    cripto9 = sha256(code9.encode()).hexdigest()
+    cripto10 = sha256(code10.encode()).hexdigest()
 
-        while True:
+    valor_moeda = 0.00094 
+    valor_transferencia = 0
 
+    while True:
+        try:
             print('\033[34m-=\033[m'*20)
             print('Oque você deseja fazer nesse sistema?')
             print('[ 1 ] - Minerar')
@@ -72,7 +71,7 @@ while True:
                     print('.', end='', flush=True)
                     sleep(0.8)
                 print()
-                exit()
+                break
 
         #Sistema de Mineração -----------------------------------
 
@@ -273,6 +272,8 @@ while True:
                     print('\033[31mO arquivo "Cripto.txt" não existe. Tente encontrar alguma Criptomoeda primeiro!\033[m')
             else:
                 print('\033[31mEssa alternativa não existe tente novamente!\033[m')
-    except:
-        print()
-        continue            
+        except:
+            print()
+            continue
+except:
+    print()            
