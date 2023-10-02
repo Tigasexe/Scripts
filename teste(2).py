@@ -16,6 +16,7 @@ print('                 Ao')
 print('     Nosso Sistema de Criptomoeda!')
 time.sleep(0.2)
 
+#Except -------------------------------------
 while True:
     try:
         def erro():
@@ -77,12 +78,9 @@ while True:
         #Sistema de Mineração -----------------------------------
 
             elif op == 1:
-
-                print('A mineração começará em...')
                 
-                for cont in range(5, 0, -1):
-                    print(cont)
-                    sleep(1)
+                criptos = [cripto1, cripto2, cripto3, cripto4, cripto5, cripto6, cripto7, cripto8, cripto9, cripto10]
+                chaves = [cripto1, cripto2, cripto3, cripto4, cripto5, cripto6, cripto7, cripto8, cripto9, cripto10]
 
                 def gerador_de_senhas(tamanho):
                     caracteres = string.ascii_letters + string.digits
@@ -94,86 +92,24 @@ while True:
                 tamanho_chave = 64
                 tentativas = 0
 
-                find = []
-                
-                def modificar_chave():
-                    find_discript = os.path.isfile('Discripto.txt')
-                    global valor
-                    
-                    if find_discript == True:
-                        with open('Discripto.txt', 'r') as modify:
-                            modificar = modify.read()
-                            to_modify = float(modificar)
-                        with open('Discripto.txt', 'w') as alterar:
-                            alterar.write(f'{to_modify + valor}')
-                    else:
-                        with open('Discripto.txt', 'w') as dinheiro:
-                            dinheiro.write(str(valor))
-                    print('\033[32m' + cripto1 + '\033[m')
-                    print(f'A chave foi encontrada com {tentativas} tentativas')
-                    find.append(chave_hashed)
-
-                while True:
-                    tentativas += 1
+                for _ in range(600):
                     chave_random = gerador_de_senhas(tamanho_chave)
                     chave_hashed = sha256_hash(chave_random)
+                    chaves.append(chave_hashed)
 
-                    if chave_hashed == cripto1:
-                        valor = 10
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto2:
-                        valor = 20
-                        cripto1 = cripto2
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto3:
-                        valor = 30
-                        cripto1 = cripto3
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto4:
-                        valor = 40
-                        cripto1 = cripto4
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto5:
-                        valor = 50
-                        cripto1 = cripto5
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto6:
-                        valor = 60
-                        cripto1 = cripto6
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto7:
-                        valor = 70
-                        cripto1 = cripto7
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto8:
-                        valor = 80
-                        cripto1 = cripto8
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto9:
-                        valor = 90
-                        cripto1 = cripto9
-                        modificar_chave()                            
-                        break
-                    elif chave_hashed == cripto10:
-                        valor = 100
-                        cripto1 = cripto10
-                        modificar_chave()                            
+                while True:
+                    escolha = random.randint(0, 609)
+
+                    if chaves[escolha] in criptos:
+                        print(f'\033[32m{chaves[escolha]}\033[m')
+                        time.sleep(0.1)
                         break
                     else:
-                        print('\033[31m' + chave_hashed + '\033[m')
-                        sleep(0.1)
-                
-                with open('Cripto.txt', 'w') as save:
-                    save.write(''.join(map(str, find)))
-                
+                        print(f'\033[31m{chaves[escolha]}\033[m')
+                        time.sleep(0.1)
+
+                print('Chave Encontrada!')
+
         #Transferencia -----------------------------------        
             
             elif op == 2:
