@@ -47,11 +47,11 @@ while True:
     escolha = random.randint(0, 609)
 
     if chaves[escolha] in criptos:
-        print(chaves[escolha])
+        print(f'\033[32m{chaves[escolha]}\033[m')
         time.sleep(0.1)
         break
     else:
-        print(chaves[escolha])
+        print(f'\033[31m{chaves[escolha]}\033[m')
         time.sleep(0.1)
 
 print('Chave Encontrada!')
