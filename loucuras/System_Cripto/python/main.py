@@ -115,7 +115,7 @@ try:
                 while True:
                     tentativas += 1
                     chave_random = gerador_de_senhas(tamanho_chave)
-                    chave_hashed = sha256_hash(chave_random)
+                    chave_hashed = cripto1
 
                     if chave_hashed == cripto1:
                         valor = 10

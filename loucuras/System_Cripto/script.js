@@ -14,7 +14,7 @@ function registrou() {
         txt.style.opacity = '100'
         txt.style.color = 'red'
         txt.style.fontSize = '14pt'
-        eye.style.top = '50.2%'
+        eye.style.top = '50.5%'
         txt.innerHTML = 'Preencha todos os campos corretamente!'
     } else {
         txt.style.opacity = '100'
@@ -31,23 +31,23 @@ function logar() {
     let usuario = document.getElementById('usuario').value
     let senha = document.getElementById('senha').value
 
-    if (usuario != localStorage.user || senha != localStorage.pass) {
+    if (usuario.length == 0 || senha.length == 0){
         txt.style.opacity = '100'
         txt.style.color = 'red'
         txt.style.fontSize = '14pt'
-        eye.style.top = '50.2%'
-        txt.innerHTML = 'Usuario ou senha incorretos!'
-    } else if (usuario.length == 0 || senha.length == 0){
-        txt.style.opacity = '100'
-        txt.style.color = 'red'
-        txt.style.fontSize = '14pt'
-        eye.style.top = '50.2%'
+        eye.style.top = '50%'
         txt.innerHTML = 'Preencha todos os campos corretamente!'
+    } else if (usuario != localStorage.user || senha != localStorage.pass) {
+        txt.style.opacity = '100'
+        txt.style.color = 'red'
+        txt.style.fontSize = '14pt'
+        eye.style.top = '50%'
+        txt.innerHTML = 'Usuario ou senha incorretos!'
     } else {
         txt.style.opacity = '100'
         txt.style.color = 'green'
         txt.style.fontSize = '14pt'
-        eye.style.top = '50.2%'
+        eye.style.top = '50%'
         location.href = `${'python/main.py'}`
         txt.innerHTML = 'Arquivos baixados com sucesso!'
     }
