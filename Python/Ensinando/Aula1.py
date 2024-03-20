@@ -10,7 +10,7 @@ ano =int(input("em que ano você: "))
 nome = input("coloque seu nome: ")
 anoAtual = date.today().year
 idade = anoAtual - ano
-print ("olá", nome, "você nasceu em", ano, "você tem", idade)
+print ("olá", nome, "você nasceu em", ano, "você tem", idade, "Anos")
 
 if idade >= 18:
     print("você é de maior")
